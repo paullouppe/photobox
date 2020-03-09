@@ -5,9 +5,7 @@ import * as lightbox from './lightbox.js';
 $(document).ready(function () {
     $("#load_gallery").on("click", gallery.initialisation);
 
-    function debug(){
-        console.log(1);
-    }
+
     $("#previous_page").on("click", gallery.page_precedante);
     $("#next_page").on("click", gallery.page_suivante);
 

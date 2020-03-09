@@ -6,7 +6,7 @@ export function initialisation(url){
 }
 
 export function chargement(uri){
-    return axios.request({
+    let promesse = axios.request({
         url : server_url+uri,
 
         method : 'get',
@@ -14,5 +14,16 @@ export function chargement(uri){
         withCredentials : true,
 
         responseType: 'json'
+    });
+    return promesse.then(function (){
+        return axios.request({
+            url : server_url+uri,
+
+            method : 'get',
+
+            withCredentials : true,
+
+            responseType: 'json'
+        });
     });
 }
