@@ -8,7 +8,6 @@ export function initialisation(url){
 export function chargement(uri){
     let promesse = axios.request({
         url : server_url+uri,
-
         method : 'get',
 
         withCredentials : true,

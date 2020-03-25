@@ -13,7 +13,8 @@ $(document).ready(function () {
     $("#lightbox_close").on("click", lightbox.fermerLightbox);
     $("#lightbox_close").keypress(lightbox.fermerLightbox);
 
-
+    $('#next-lightbox').on("click", gallery.next_lightbox);
+    $('#prev-lightbox').on("click", gallery.prev_lightbox);
 
     $(document).keydown(function(e) {
         // ESCAPE key pressed
